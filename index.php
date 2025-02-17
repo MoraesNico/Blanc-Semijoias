@@ -1,5 +1,8 @@
-<?php include "cabecalho.php";?>
+<?php 
+    include 'cabecalho.php';
+    include 'mysql/conexao.php';
+?>
 
-<h1>Blanc Semijoias<h1>
 
-<?php include "rodape.php";?>
+
+<?php include 'rodape.php';?>

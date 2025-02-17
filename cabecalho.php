@@ -4,37 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blanc</title>
-    <link rel="stylesheet" href="bootstrap.min.css" />
+    <link rel="stylesheet" href="bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="CSS/style.css">
 </head>
 <body>
 
-
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
-<div class="container-fluid">
-
-    <a class="navbar-brand" href="index.php">Blanc Semijoias</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link" href="mostruario.php">Mostruario</a>
-        </li>
-        <li class="nav-item dropdown">
-          
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-        </li>
-      </ul>
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
-    </div>
-  </div>
-</nav>
-    
-<div class="container"> 
+<?php session_start(); ?>
+    <header class="header">
+        <a href="index.php" class="label">Blanc</a>
+        <div class="separator"></div>
+        <div class="separator"></div>
+        <nav class="nav-links">
+        <a href="#" class="nav-item">Novos</a>
+        <a href="#" class="nav-item">Brincos</a>
+        <a href="#" class="nav-item">Colares</a>
+        <a href="#" class="nav-item">Pulseiras</a>
+        <a href="#" class="nav-item">NewsLatter</a>
+        <a href="login.php" class="nav-item">Login</a>
+        <?php if (isset($_SESSION["admin"]) && $_SESSION["admin"] === true): ?>
+          <a class="nav-item" href="admin_tools.php">Admin Tools</a>
+        <?php endif; ?>
+        </nav>
+    </header>
